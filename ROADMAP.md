@@ -20,17 +20,18 @@ Main requirements:
 
 ---
 
-## 2. Team roles
+## 2. Team roles and workload sharing
 
-### Cser2-hyb - Leader / Main Developer
+### Cser2-hyb - Leader / Main Developer / Main Tester
 
 Responsibilities:
 - Manage GitHub repository and project board.
 - Create project structure.
-- Build main menu.
-- Implement rental logic.
+- Build and review the main menu.
+- Implement or review rental logic.
 - Integrate all modules.
 - Review code and fix bugs.
+- Test important features before marking tasks as Done.
 - Lead final demo.
 
 Assigned issues:
@@ -38,22 +39,41 @@ Assigned issues:
 - #3 Create Rental class with fee and penalty logic
 - #6 Build Rental Management service and menu
 - #8 Add exception handling and input validation
+- #9 Prepare sample data and manual test cases
+
+Shared testing with Titanrz:
+- Test #2 Equipment class
+- Test #4 CSV file loading and saving
+- Test #5 Equipment Management menu
+- Test #6 Rental Management menu
+- Test #7 Data analysis and sorting functions
 
 ---
 
-### Titanrz - Coder Member
+### Titanrz - Coder Member / Co-Tester
 
 Responsibilities:
 - Implement equipment-related code.
 - Implement CSV file loading and saving.
 - Implement sorting and data analysis.
-- Help test code.
+- Help test the system with Cser2-hyb.
+- Test the features after coding before asking for leader review.
+- Help reduce the leader's testing workload.
 
-Assigned issues:
+Assigned coding issues:
 - #2 Create Equipment class with validation
 - #4 Implement CSV file loading and saving
 - #5 Build Equipment Management service and menu
 - #7 Implement data analysis and sorting functions
+
+Shared testing issues:
+- #2 Test Equipment class validation
+- #4 Test CSV load/save after restart
+- #5 Test add/search/update equipment
+- #6 Test rental workflow with Cser2-hyb
+- #7 Test sorting and grouping functions
+- #8 Help test invalid input cases
+- #9 Help prepare and run manual test cases
 
 ---
 
@@ -71,24 +91,41 @@ Assigned issue:
 
 ---
 
-### NTVien207 - Testing / Slide Member
+### NTVien207 - Slide / Demo Support Member
 
 Responsibilities:
-- Prepare sample data.
-- Write manual test cases.
-- Test all menu functions.
 - Create presentation slides.
 - Prepare speaking notes for presentation.
+- Help collect screenshots from the running program.
+- Help prepare demo script.
+- Support manual testing if needed.
 
-Assigned issues:
-- #9 Prepare sample data and manual test cases
+Assigned issue:
 - #11 Create presentation slides and demo script
 
 Note: NTVien207 must accept the GitHub invitation before being assigned directly.
 
 ---
 
-## 3. Project folder structure
+## 3. Updated task assignment table
+
+| Issue | Task | Main owner | Support / Test |
+|---|---|---|---|
+| #1 | Setup project structure and README | Cser2-hyb | Titanrz reviews structure |
+| #2 | Create Equipment class with validation | Titanrz | Cser2-hyb tests |
+| #3 | Create Rental class with fee and penalty logic | Cser2-hyb | Titanrz tests duration, fee, penalty |
+| #4 | Implement CSV file loading and saving | Titanrz | Cser2-hyb tests restart/load/save |
+| #5 | Build Equipment Management service and menu | Titanrz | Cser2-hyb tests add/search/update |
+| #6 | Build Rental Management service and menu | Cser2-hyb | Titanrz tests rental flow |
+| #7 | Implement data analysis and sorting functions | Titanrz | Cser2-hyb tests sorting results |
+| #8 | Add exception handling and input validation | Cser2-hyb | Titanrz helps test invalid inputs |
+| #9 | Prepare sample data and manual test cases | Cser2-hyb | Titanrz runs test cases together |
+| #10 | Write final report | nguyenphanleha2k7-hub | Cser2-hyb provides screenshots/info |
+| #11 | Create presentation slides and demo script | NTVien207 | Cser2-hyb provides demo flow |
+
+---
+
+## 4. Project folder structure
 
 ```text
 event_equipment_rental/
@@ -116,7 +153,7 @@ event_equipment_rental/
 
 ---
 
-## 4. Development phases
+## 5. Development phases
 
 ### Phase 1 - Project setup
 
@@ -128,6 +165,9 @@ Tasks:
 
 Related issue:
 - #1
+
+Owner:
+- Cser2-hyb
 
 Done when:
 - `python main.py` runs without crashing.
@@ -147,6 +187,10 @@ Tasks:
 Related issues:
 - #2
 - #3
+
+Owners:
+- #2 Equipment: Titanrz codes, Cser2-hyb tests.
+- #3 Rental: Cser2-hyb codes, Titanrz tests.
 
 Done when:
 - Equipment and Rental objects can be created.
@@ -168,6 +212,9 @@ Tasks:
 Related issue:
 - #4
 
+Owner:
+- Titanrz codes, Cser2-hyb tests restart/load/save.
+
 Done when:
 - Data is still available after restarting the program.
 
@@ -185,6 +232,9 @@ Tasks:
 
 Related issue:
 - #5
+
+Owner:
+- Titanrz codes, Cser2-hyb tests add/search/update.
 
 Done when:
 - User can manage equipment from the menu.
@@ -206,6 +256,9 @@ Tasks:
 Related issue:
 - #6
 
+Owner:
+- Cser2-hyb codes, Titanrz tests rental workflow.
+
 Done when:
 - Rental workflow works from the console menu.
 
@@ -222,6 +275,9 @@ Tasks:
 
 Related issue:
 - #7
+
+Owner:
+- Titanrz codes, Cser2-hyb tests output.
 
 Done when:
 - All analysis features work from the menu.
@@ -242,6 +298,9 @@ Tasks:
 Related issue:
 - #8
 
+Owner:
+- Cser2-hyb codes, Titanrz helps test invalid input cases.
+
 Done when:
 - Program does not crash on wrong input.
 
@@ -252,6 +311,7 @@ Done when:
 Tasks:
 - Prepare sample data.
 - Write at least 10 manual test cases.
+- Run manual test cases with Cser2-hyb and Titanrz.
 - Take screenshots.
 - Write final report.
 - Create class diagram.
@@ -264,12 +324,17 @@ Related issues:
 - #10
 - #11
 
+Owners:
+- #9 Testing: Cser2-hyb + Titanrz.
+- #10 Report: nguyenphanleha2k7-hub.
+- #11 Slides: NTVien207.
+
 Done when:
 - Code, report PDF, and slides are ready.
 
 ---
 
-## 5. Weekly timeline
+## 6. Weekly timeline
 
 ### Week 1
 - Finish GitHub setup.
@@ -278,24 +343,31 @@ Done when:
 
 ### Week 2
 - Finish `Equipment` and `Rental` classes.
+- Titanrz and Cser2-hyb test both classes together.
 
 ### Week 3
 - Finish CSV/Text file loading and saving.
+- Titanrz tests load/save first, then Cser2-hyb reviews.
 
 ### Week 4
 - Finish Equipment Management menu.
+- Titanrz tests add/search/update, then Cser2-hyb reviews.
 
 ### Week 5
 - Finish Rental Management menu.
+- Cser2-hyb codes rental flow, Titanrz tests rental scenarios.
 
 ### Week 6
 - Finish fee calculation, late penalty, and status updates.
+- Titanrz helps test normal rental and late return cases.
 
 ### Week 7
 - Finish sorting, grouping, validation, and error handling.
+- Cser2-hyb and Titanrz run invalid input tests together.
 
 ### Week 8
 - Finish testing, report draft, diagrams, and slides draft.
+- Cser2-hyb and Titanrz provide screenshots and test results to report/slide members.
 
 ### Week 9
 - Fix final bugs.
@@ -305,7 +377,7 @@ Done when:
 
 ---
 
-## 6. Priority order
+## 7. Priority order
 
 1. Project structure
 2. Equipment class
@@ -315,13 +387,37 @@ Done when:
 6. Rental management
 7. Validation and exception handling
 8. Data analysis
-9. Testing
+9. Testing with Cser2-hyb + Titanrz
 10. Report
 11. Slides
 
 ---
 
-## 7. Final checklist
+## 8. Testing responsibility split
+
+### Cser2-hyb tests
+- Overall menu flow.
+- Rental creation and return flow.
+- Invalid rental times.
+- Missing client name.
+- Final integration before demo.
+
+### Titanrz tests
+- Equipment class validation.
+- Equipment add/search/update.
+- CSV load/save.
+- Sorting by rental rate and power rating.
+- Rental fee and late penalty together with Cser2-hyb.
+- Invalid equipment status and unavailable equipment.
+
+### Both test together
+- Full demo from start to finish.
+- Add equipment -> create rental -> return rental -> calculate fee -> check CSV.
+- At least 10 manual test cases.
+
+---
+
+## 9. Final checklist
 
 - [ ] Source code `.py` files completed
 - [ ] Code organized into multiple modules
@@ -339,7 +435,7 @@ Done when:
 - [ ] Auto-load on startup completed
 - [ ] Save on exit completed
 - [ ] Try-except validation completed
-- [ ] Test cases completed
+- [ ] Test cases completed by Cser2-hyb and Titanrz
 - [ ] Technical report PDF completed
 - [ ] Class diagram completed
 - [ ] Flowchart completed

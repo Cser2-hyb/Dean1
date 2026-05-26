@@ -1,35 +1,5 @@
 from datetime import datetime # thư viện xử lí thời gian
-import math
-
-
-def parse_datetime(value: str) -> datetime:
-    value = str(value).strip()
-    if not value or value.lower() == "none":
-        raise ValueError("Invalid datetime value")
-
-    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d"):
-        try:
-            return datetime.strptime(value, fmt)
-        except ValueError:
-            continue
-
-    raise ValueError(
-        f"Unable to parse datetime from '{value}'. "
-        "Expected format 'YYYY-MM-DD HH:MM' or 'YYYY-MM-DD'."
-    )
-
-
-def calculate_hours(start: datetime, end: datetime) -> float:
-    if not isinstance(start, datetime) or not isinstance(end, datetime):
-        raise TypeError("start and end must be datetime objects")
-
-    delta = end - start
-    total_seconds = delta.total_seconds()
-    if total_seconds <= 0:
-        return 0.0
-
-    return float(math.ceil(total_seconds / 3600.0))
-
+from utils.time_utils import parse_datetime, calculate_hours #thêm 2 hàm tiện ích xử lý ngày giờ
 
 
 

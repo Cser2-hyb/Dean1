@@ -39,7 +39,6 @@ Assigned issues:
 - #3 Create Rental class with fee and penalty logic
 - #6 Build Rental Management service and menu
 - #8 Add exception handling and input validation
-- #9 Prepare sample data and manual test cases
 
 Shared testing with Titanrz:
 - Test #2 Equipment class
@@ -53,15 +52,14 @@ Shared testing with Titanrz:
 ### Titanrz - Coder Member / Co-Tester
 
 Responsibilities:
-- Implement equipment-related code.
 - Implement CSV file loading and saving.
+- Implement equipment management features.
 - Implement sorting and data analysis.
 - Help test the system with Cser2-hyb.
 - Test the features after coding before asking for leader review.
 - Help reduce the leader's testing workload.
 
 Assigned coding issues:
-- #2 Create Equipment class with validation
 - #4 Implement CSV file loading and saving
 - #5 Build Equipment Management service and menu
 - #7 Implement data analysis and sorting functions
@@ -73,37 +71,42 @@ Shared testing issues:
 - #6 Test rental workflow with Cser2-hyb
 - #7 Test sorting and grouping functions
 - #8 Help test invalid input cases
-- #9 Help prepare and run manual test cases
+- #9 Help run manual test cases
 
 ---
 
-### nguyenphanleha2k7-hub - Report Member
+### nguyenphanleha2k7-hub - Report / Manual Testing Member
 
 Responsibilities:
+- Prepare sample data.
+- Write manual test cases.
+- Run and document testing results.
 - Write final report.
 - Create class diagram.
 - Create flowchart.
 - Add screenshots from the running program.
 - Explain project objective, architecture, features, file storage, validation, and testing.
 
-Assigned issue:
+Assigned issues:
+- #9 Prepare sample data and manual test cases
 - #10 Write final report
 
 ---
 
-### NTVien207 - Slide / Demo Support Member
+### NTVien207 - Equipment / Slide / Demo Support Member
 
 Responsibilities:
+- Implement the Equipment class.
+- Validate equipment data rules.
 - Create presentation slides.
 - Prepare speaking notes for presentation.
 - Help collect screenshots from the running program.
 - Help prepare demo script.
 - Support manual testing if needed.
 
-Assigned issue:
+Assigned issues:
+- #2 Create Equipment class with validation
 - #11 Create presentation slides and demo script
-
-Note: NTVien207 must accept the GitHub invitation before being assigned directly.
 
 ---
 
@@ -112,14 +115,14 @@ Note: NTVien207 must accept the GitHub invitation before being assigned directly
 | Issue | Task | Main owner | Support / Test |
 |---|---|---|---|
 | #1 | Setup project structure and README | Cser2-hyb | Titanrz reviews structure |
-| #2 | Create Equipment class with validation | Titanrz | Cser2-hyb tests |
+| #2 | Create Equipment class with validation | NTVien207 | Cser2-hyb and Titanrz test validation |
 | #3 | Create Rental class with fee and penalty logic | Cser2-hyb | Titanrz tests duration, fee, penalty |
 | #4 | Implement CSV file loading and saving | Titanrz | Cser2-hyb tests restart/load/save |
 | #5 | Build Equipment Management service and menu | Titanrz | Cser2-hyb tests add/search/update |
 | #6 | Build Rental Management service and menu | Cser2-hyb | Titanrz tests rental flow |
 | #7 | Implement data analysis and sorting functions | Titanrz | Cser2-hyb tests sorting results |
 | #8 | Add exception handling and input validation | Cser2-hyb | Titanrz helps test invalid inputs |
-| #9 | Prepare sample data and manual test cases | Cser2-hyb | Titanrz runs test cases together |
+| #9 | Prepare sample data and manual test cases | nguyenphanleha2k7-hub | Cser2-hyb and Titanrz run test cases together |
 | #10 | Write final report | nguyenphanleha2k7-hub | Cser2-hyb provides screenshots/info |
 | #11 | Create presentation slides and demo script | NTVien207 | Cser2-hyb provides demo flow |
 
@@ -189,7 +192,7 @@ Related issues:
 - #3
 
 Owners:
-- #2 Equipment: Titanrz codes, Cser2-hyb tests.
+- #2 Equipment: NTVien207 codes, Cser2-hyb and Titanrz test validation.
 - #3 Rental: Cser2-hyb codes, Titanrz tests.
 
 Done when:
@@ -325,7 +328,7 @@ Related issues:
 - #11
 
 Owners:
-- #9 Testing: Cser2-hyb + Titanrz.
+- #9 Testing: nguyenphanleha2k7-hub prepares sample data and manual test cases; Cser2-hyb and Titanrz run/review tests.
 - #10 Report: nguyenphanleha2k7-hub.
 - #11 Slides: NTVien207.
 
@@ -343,6 +346,7 @@ Done when:
 
 ### Week 2
 - Finish `Equipment` and `Rental` classes.
+- NTVien207 codes the Equipment class.
 - Titanrz and Cser2-hyb test both classes together.
 
 ### Week 3
@@ -366,7 +370,8 @@ Done when:
 - Cser2-hyb and Titanrz run invalid input tests together.
 
 ### Week 8
-- Finish testing, report draft, diagrams, and slides draft.
+- Finish sample data, manual test cases, report draft, diagrams, and slides draft.
+- nguyenphanleha2k7-hub prepares sample data and manual test cases.
 - Cser2-hyb and Titanrz provide screenshots and test results to report/slide members.
 
 ### Week 9
@@ -387,7 +392,7 @@ Done when:
 6. Rental management
 7. Validation and exception handling
 8. Data analysis
-9. Testing with Cser2-hyb + Titanrz
+9. Testing with nguyenphanleha2k7-hub, Cser2-hyb, and Titanrz
 10. Report
 11. Slides
 
@@ -403,14 +408,26 @@ Done when:
 - Final integration before demo.
 
 ### Titanrz tests
-- Equipment class validation.
+- Equipment class validation together with Cser2-hyb.
 - Equipment add/search/update.
 - CSV load/save.
 - Sorting by rental rate and power rating.
 - Rental fee and late penalty together with Cser2-hyb.
 - Invalid equipment status and unavailable equipment.
 
-### Both test together
+### NTVien207 tests
+- Equipment object creation.
+- Equipment private attributes and property decorators.
+- Equipment validation for status, power rating, and hourly rate.
+- Equipment `to_dict()` and `from_dict()` methods.
+
+### nguyenphanleha2k7-hub tests
+- Prepare sample equipment data.
+- Prepare sample rental data.
+- Write at least 10 manual test cases.
+- Record testing results for the report.
+
+### Team test together
 - Full demo from start to finish.
 - Add equipment -> create rental -> return rental -> calculate fee -> check CSV.
 - At least 10 manual test cases.
@@ -435,7 +452,7 @@ Done when:
 - [ ] Auto-load on startup completed
 - [ ] Save on exit completed
 - [ ] Try-except validation completed
-- [ ] Test cases completed by Cser2-hyb and Titanrz
+- [ ] Test cases completed by nguyenphanleha2k7-hub with team support
 - [ ] Technical report PDF completed
 - [ ] Class diagram completed
 - [ ] Flowchart completed

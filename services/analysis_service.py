@@ -41,20 +41,20 @@ equipment_list = [
     Equipment("Grinder", 45, 500)    # Tên: Grinder (Máy mài), Giá: 45, Công suất: 500
 ]
 
-print("--- DANH SÁCH BAN ĐẦU ---")
+print("--- ORIGINAL LIST ---")
 for eq in equipment_list:
     print(eq)
 print("-" * 50)
 
 # 2. Chạy thử Ý 1: Sắp xếp theo giá thuê
-print("\n--- Ý 1: SORTED BY RATE/HOUR (TĂNG DẦN) ---")
+print("\n--- Ý 1: SORTED BY RATE/HOUR  ---")
 # Dùng .copy() để tạo bản sao, tránh làm đảo lộn danh sách gốc ban đầu
 sorted_by_rate = sort_equipment_by_rate(equipment_list.copy())
 for eq in sorted_by_rate:
     print(eq)
 
 # 3. Chạy thử Ý 2: Sắp xếp theo công suất
-print("\n--- Ý 2: SORTED BY POWER (TĂNG DẦN) ---")
+print("\n--- Ý 2: SORTED BY POWER  ---")
 sorted_by_power = sort_equipment_by_power(equipment_list.copy())
 for eq in sorted_by_power:
     print(eq)

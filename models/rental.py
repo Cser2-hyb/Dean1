@@ -214,6 +214,25 @@ class Rental:
         """
         end_time = self.actual_return if self.actual_return else self.expected_return
         return calculate_hours(self.start_time, end_time)
+
+    def calculate_late_penalty(self, equipment_list: list) -> float:
+        """
+        Tính tiền phạt nếu trả trễ.
+        Tiền phạt = Số giờ trễ * LATE_PENALTY_RATE * Tổng hourly_rate của thiết bị.
+        """
+        if not self.actual_return or self.actual_return <= self.expected_return:
+            return 0.0
+
+        late_hours = calculate_hours(self.expected_return, self.actual_return)
+        
+        equipment_dict = {eq.equipment_id: eq for eq in equipment_list}
+        total_hourly_rate = 0.0
+        for eq_id in self.equipment_ids:
+            if eq_id in equipment_dict:
+                total_hourly_rate += equipment_dict[eq_id].hourly_rate
+
+        penalty = late_hours * total_hourly_rate * self.LATE_PENALTY_RATE
+        return round(penalty, 2)
     # ──────────────────────────────────────────────
     # Phương thức chuyển đổi dữ liệu
     # ──────────────────────────────────────────────

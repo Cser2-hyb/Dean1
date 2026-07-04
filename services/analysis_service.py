@@ -5,8 +5,8 @@
 class Equipment:
     def __init__(self, name, rate_per_hour, power):
         self.name = name                  # Tên của thiết bị
-        self.rate_per_hour = rate_per_hour  # Giá thuê theo giờ (Ý 1)
-        self.power = power                # Công suất của thiết bị (Ý 2)
+        self.rate_per_hour = rate_per_hour  # Giá thuê theo giờ 
+        self.power = power                # Công suất của thiết bị 
 
     # Hàm này giúp khi in thiết bị ra màn hình sẽ đẹp và thẳng hàng hơn
     def __str__(self):
